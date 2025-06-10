@@ -1,5 +1,5 @@
-import React from 'react';
 import { ExternalLink, Github, Star } from 'lucide-react';
+import Particles from './Particles';
 
 const Projects = () => {
   const projects = [
@@ -60,8 +60,27 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-6">
+ <section id="projects" className="py-20 bg-[#080B14] relative overflow-hidden">
+
+
+      {/* Particles Background - Previously Silk */}
+      <div className="absolute inset-0 z-0">
+        <Particles
+          particleColors={['#ffffff', '#00f0ff', '#f5f5f5', '#b3e5fc', '#e0f7fa']}
+
+          particleCount={200}
+          particleSpread={10}
+          speed={0.4}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+          className="w-full h-full"
+        />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
             Featured Projects

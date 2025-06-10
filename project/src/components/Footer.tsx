@@ -1,10 +1,20 @@
-import React from 'react';
 import { Heart, Code, Coffee } from 'lucide-react';
+import Ballpit from './Ballpit';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 py-12 border-t border-gray-700">
-      <div className="container mx-auto px-6">
+    <footer className="bg-gray-900 py-12 border-t border-gray-700 relative overflow-hidden">
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0, minHeight: '500px', maxHeight: '500px', width: '100%' }}>
+        <Ballpit
+          count={200}
+          gravity={0.7}
+          friction={0.8}
+          wallBounce={0.95}
+          followCursor={true}
+        />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">

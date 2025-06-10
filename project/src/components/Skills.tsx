@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Code, Database, Cloud, Zap } from 'lucide-react';
+import Silk from './Silk';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -78,11 +79,15 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 right-10 w-40 h-40 bg-blue-500/5 rounded-full animate-float"></div>
-        <div className="absolute bottom-10 left-10 w-32 h-32 bg-purple-500/5 rounded-full animate-float delay-500"></div>
-        <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-pink-500/5 rounded-full animate-pulse-glow"></div>
+      {/* Silk Background - Previously Particles */}
+      <div className="absolute inset-0 z-0">
+        <Silk
+          speed={20}
+          scale={1}
+          color="#0D1B2A"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

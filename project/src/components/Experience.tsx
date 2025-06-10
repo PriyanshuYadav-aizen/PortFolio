@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Calendar, Building } from 'lucide-react';
+import LetterGlitch from './LetterGlitch';
 
 const Experience = () => {
   const experiences = [
@@ -58,8 +59,18 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-20 bg-gray-900 relative overflow-hidden">
+      {/* LetterGlitch Background */}
+      <div className="absolute inset-0 z-0">
+        <LetterGlitch
+          glitchSpeed={50}
+          centerVignette={true}
+          outerVignette={false}
+          smooth={true}
+          glitchColors={["rgba(43, 69, 57, 0.2)", "rgba(97, 220, 163, 0.2)", "rgba(97, 179, 220, 0.2)"]}
+        />
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
             Professional Experience
