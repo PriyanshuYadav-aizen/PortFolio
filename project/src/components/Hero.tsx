@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code, Zap } from 'lucide-react';
+import FallingText from './FallingText';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -80,6 +81,8 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
+         
+
           {/* Animated Logo/Icon */}
           <div className={`mb-8 ${isLoaded ? 'animate-bounce-in' : 'opacity-0'}`}>
             <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 animate-pulse-glow">
